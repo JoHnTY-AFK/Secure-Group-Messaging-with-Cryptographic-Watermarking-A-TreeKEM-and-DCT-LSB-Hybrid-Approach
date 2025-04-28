@@ -1,0 +1,38 @@
+project-folder/
+│
+├── .venv/                  # Virtual environment
+│
+├── src/                    # Source code directory
+│   ├── __init__.py         # Makes src a Python package
+│   ├── encrypt.py          # Encryption script with watermarking
+│   ├── decrypt.py          # Decryption script with watermark extraction
+│   └── utils/              # Utility modules (optional for modularity)
+│       ├── __init__.py     # Makes utils a package
+│       ├── watermark.py    # Watermarking functions (DCT, LSB)
+│       ├── crypto.py       # Encryption/decryption functions
+│       └── treekem.py      # TreeKEM implementation
+│
+├── data/                   # Input data directory
+│   ├── photos/             # Original photos to encrypt
+│   │   ├── testcase_1.png
+│   │   ├── testcase_2.jpeg
+│   │   ├── testcase_3.bmp
+│   │   ├── testcase_4.webp
+│   │   └── testcase_5.gif
+│   └── watermarks/         # Watermark images for DCT
+│       ├── watermark.png
+│       └── watermark2.png
+│
+├── output/                 # Output directory for processed files
+│   ├── encrypted/          # Encrypted files
+│   │   ├── derived_key.bin
+│   │   ├── encrypted_photo.bin
+│   │   └── encrypted_messages.txt
+│   ├── decrypted/          # Decrypted files
+│   │   └── decrypted_photo.png
+│   └── extracted/          # Extracted watermarks
+│       └── extracted_dct_watermark.png
+│
+├── requirements.txt        # List of dependencies (e.g., cryptography, opencv-python, Pillow)
+├── structure.txt
+└── README.md               # Project documentation
